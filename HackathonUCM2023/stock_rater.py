@@ -21,6 +21,8 @@ class Stock:
     pe_ratio: float
     eps: int
     dividend: int
+    dividend_yield: int
+    
     score = 50
 
 company50List = (
@@ -78,7 +80,7 @@ top10List = [10]
 avoidList = [10]
 
 #get company name (inputed by user thorugh UI)
-companyName = company50List[2]
+companyName = company50List[0]
 
 #create quote table for a given stock
 quote_table = si.get_quote_table(companyName)
@@ -101,12 +103,12 @@ if dividend == 'N/A':
 div_yield = float(dividend) / price
 
 #create new stock (using pre determined variables)
-stockTest = Stock(companyName, price, PERatio, earnings_per_share, dividend)
+stockTest = Stock(companyName, price, PERatio, earnings_per_share, dividend, div_yield)
 
 #test for values
 print("Company: " + stockTest.companyName)
 print("Stock price: " + str(stockTest.price))
 print("PE Ratio: " + str(stockTest.pe_ratio))
-print(dividend)
-print(earnings_per_share)
-print(div_yield)
+print("Dividends: " + str(stockTest.dividend))
+print("Earnings per Share: " + str(stockTest.eps))
+print("Dividend Yield: " + str(stockTest.dividend_yield))
