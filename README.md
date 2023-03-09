@@ -1,5 +1,5 @@
 # HackMercedVIII
-UC Merced HackMerced VIII project repo
+UC Merced HackMerced VIII project repo || March 3 - March 5 || https://hackmerced-viii.devpost.com/
 
 Ideas: 
 
